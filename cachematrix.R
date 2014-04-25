@@ -3,6 +3,7 @@
 
 ## This function will calculate and store the inverse of a matrix in cache
 
+
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   set <- function(y) {
@@ -18,7 +19,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This function will use the inverse matrix previously created and stored in cache by function makeCacheMatrix
+## cacheSolve - This function will checks to see if the inverse of the matrix has already been calculated. 
+## If so, it gets the inverse from the cache and skips the computation.
+## Otherwise, it calculates the inverse of the data and sets the value of the mean in the cache via the setsolve function.
 
 cacheSolve <- function(x, ...) {
   m <- x$getsolve()
